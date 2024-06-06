@@ -1,0 +1,116 @@
+/* Reseteo de padding y margen para todos los elementos y ajuste del modelo de caja */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Establece el tamaño de fuente base en 10px (62.5% de 16px por defecto) */
+html {
+    font-size: 62.5%;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    background-color: #7deaedde; /* Color de fondo semi-transparente */
+    font-family: 'Roboto', sans-serif; /* Fuente principal */
+    color: #230202; /* Color de texto principal */
+    padding: 1rem; /* Relleno general */
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-weight: 400; /* Peso de la fuente normal */
+    font-size: 2.4rem; /* Tamaño de fuente */
+    padding: 1rem; /* Relleno alrededor del título */
+}
+
+/* Estilos para el subtítulo dentro del encabezado */
+header h5 {
+    padding: 1rem; /* Relleno alrededor del subtítulo */
+    font-size: 2rem; /* Tamaño de fuente */
+    font-weight: 700; /* Peso de la fuente en negrita */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+/* Estilos para los párrafos dentro del encabezado */
+header p {
+    font-family: 'Open Sans', sans-serif; /* Fuente secundaria */
+    font-size: 1.6rem; /* Tamaño de fuente */
+    padding: 1rem; /* Relleno alrededor del párrafo */
+}
+
+/* Estilos para la sección carrusel */
+.carrusel {
+    margin: 2rem 0; /* Margen superior e inferior */
+    font-size: 1.6rem; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de la fuente semi-negrita */
+}
+
+/* Estilos para los artículos dentro del carrusel */
+.carrusel article {
+    display: grid; /* Muestra los artículos como cuadrícula */
+    place-items: center; /* Centra los elementos dentro de la cuadrícula */
+    width: 100%; /* Ancho completo */
+    height: 120px; /* Altura fija */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+/* Estilos para el segundo artículo dentro del carrusel */
+.carrusel article:nth-child(2) {
+    background-color:#006effd8 ; /* Color de fondo semi-transparente */
+}
+
+/* Estilos para el primer y tercer artículo del carrusel al pasar el mouse por encima */
+.carrusel article:nth-child(1):hover,
+.carrusel article:nth-child(3):hover {
+    background-color: #2f21012c; /* Color de fondo semi-transparente */
+}
+
+/* Estilos para los contenedores dentro de los artículos del carrusel */
+.carrusel div {
+    text-align: center; /* Centra el contenido */
+}
+
+/* Estilos para los iconos dentro de los artículos del carrusel */
+.carrusel i {
+    font-size: 4rem; /* Tamaño de fuente del icono */
+}
+
+/* Estilos para la imagen principal */
+.main-img {
+    width: 100%; /* Ancho completo */
+    max-height: auto; /* Altura automática según la proporción */
+}
+
+/* Media query para pantallas con ancho mínimo de 600px */
+@media screen and (min-width:600px) {
+    .carrusel {
+        display: flex; /* Cambia la disposición a flexbox */
+    }
+}
+
+/* Media query para pantallas con ancho mínimo de 900px */
+@media screen and (min-width:900px) {
+    header {
+        width: 100%; /* Ancho completo */
+        height: 100vh; /* Alto de pantalla completa */
+        display: flex; /* Cambia la disposición a flexbox */
+        align-items: center; /* Alinea verticalmente */
+        gap: 10px; /* Espacio entre elementos */
+        padding: 2rem; /* Relleno general */
+    }
+    h1 {
+        font-size: 6rem; /* Tamaño de fuente */
+    }
+    .carrusel article {
+        margin-top: 4rem; /* Margen superior */
+        height: 400px; /* Altura fija */
+    }
+    .contain-container {
+        width: 60%; /* Ancho del contenedor */
+    }
+    .img-container {
+        width: 40%; /* Ancho del contenedor */
+    }
+}
